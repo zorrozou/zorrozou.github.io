@@ -1,0 +1,325 @@
+# Translation of Themes - Twenty Seventeen in Chinese (China)
+# This file is distributed under the same license as the Themes - Twenty Seventeen package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-12-10 23:20:04+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: zh_CN\n"
+"Project-Id-Version: Themes - Twenty Seventeen\n"
+
+#. Description of the theme
+msgid "Twenty Seventeen brings your site to life with header video and immersive featured images. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device."
+msgstr "Twenty Seventeen主题能够展现生动的页头视频，特色图片与文章浑然一体，让你的博客充满生机。它针对商业网站而设计，静态首页可以自定义多个不同的页面作为其段落。它也支持小工具、水平导航栏、社交网络菜单、自定义网站Logo等功能。它的非对称网格设计配合可自定义的配色系统让你的博客更具个性，还具备多种文章布局和样式让你在展示多媒体内容时更加得心应手。这个主题是我们在2017年的默认主题，在不同的语言、运用场景和设备上都能良好工作。"
+
+#. Theme Name of the theme
+msgid "Twenty Seventeen"
+msgstr "Twenty Seventeen"
+
+#: template-parts/footer/footer-widgets.php:18
+msgid "Footer"
+msgstr "页脚"
+
+#: functions.php:340
+msgid "Add widgets here to appear in your sidebar on blog posts and archive pages."
+msgstr "放置在这里的小工具会显示在您的文章、存档页面的侧栏上。"
+
+#: functions.php:338 sidebar.php:18
+msgid "Blog Sidebar"
+msgstr "博客边栏"
+
+#: template-parts/header/site-branding.php:34
+#: template-parts/navigation/navigation-top.php:31
+msgid "Scroll down to content"
+msgstr "向下滚动到内容"
+
+#: functions.php:181
+msgctxt "Theme starter content"
+msgid "Coffee"
+msgstr "咖啡"
+
+#: functions.php:177
+msgctxt "Theme starter content"
+msgid "Sandwich"
+msgstr "三明治"
+
+#: functions.php:173
+msgctxt "Theme starter content"
+msgid "Espresso"
+msgstr "浓缩咖啡"
+
+#: inc/custom-header.php:128
+msgid "Pause background video"
+msgstr "暂停背景视频"
+
+#: inc/custom-header.php:127
+msgid "Play background video"
+msgstr "播放背景视频"
+
+#: inc/customizer.php:109
+msgid "When the two-column layout is assigned, the page title is in one column and content is in the other."
+msgstr "在使用两栏布局时，标题在左栏显示，内容在右栏显示。"
+
+#: single.php:34
+msgid "Next Post"
+msgstr "下一篇文章"
+
+#: index.php:27
+msgid "Posts"
+msgstr "文章"
+
+#: inc/template-tags.php:89
+msgid "Tags"
+msgstr "标签"
+
+#: inc/template-tags.php:85
+msgid "Categories"
+msgstr "分类"
+
+#. translators: Used between list items, there is a space after the comma.
+#: inc/template-tags.php:66
+msgid ", "
+msgstr "、"
+
+#. translators: %s: Post date.
+#: inc/template-tags.php:52
+msgid "<span class=\"screen-reader-text\">Posted on</span> %s"
+msgstr "<span class=\"screen-reader-text\">发布于</span>%s"
+
+#. translators: %s: Post author.
+#: inc/template-tags.php:21
+msgid "by %s"
+msgstr "由%s"
+
+#: inc/icon-functions.php:44
+msgid "Please define an SVG icon filename."
+msgstr "请定义SVG图标文件名。"
+
+#: inc/icon-functions.php:39
+msgid "Please define default parameters in the form of an array."
+msgstr "请用数组的形式定义默认参数。"
+
+#: inc/customizer.php:143
+msgid "Select pages to feature in each area from the dropdowns. Add an image to a section by setting a featured image in the page editor. Empty sections will not be displayed."
+msgstr "选择要出现在每个区域中的页面。在页面编辑器中设置特色图片来添加图片到章节。空章节不会被显示。"
+
+#. translators: %d: The front page section number.
+#: inc/customizer.php:142
+msgid "Front Page Section %d Content"
+msgstr "首页章节%d内容"
+
+#: inc/customizer.php:112 inc/customizer.php:171
+msgid "Two Column"
+msgstr "两栏"
+
+#: inc/customizer.php:111 inc/customizer.php:170
+msgid "One Column"
+msgstr "一栏"
+
+#: inc/customizer.php:106
+msgid "Page Layout"
+msgstr "页面布局"
+
+#: inc/customizer.php:89
+msgid "Theme Options"
+msgstr "主题选项"
+
+#: inc/customizer.php:64
+msgid "Custom"
+msgstr "自定义"
+
+#: inc/customizer.php:62
+msgid "Light"
+msgstr "亮色"
+
+#: inc/customizer.php:60
+msgid "Color Scheme"
+msgstr "配色方案"
+
+#: inc/custom-header.php:56
+msgid "Default Header Image"
+msgstr "默认头部图像"
+
+#: functions.php:362
+msgid "Footer 2"
+msgstr "页脚2"
+
+#: functions.php:352 functions.php:364
+msgid "Add widgets here to appear in your footer."
+msgstr "在此向页脚中添加挂件。"
+
+#: functions.php:350
+msgid "Footer 1"
+msgstr "页脚1"
+
+#: functions.php:290
+msgctxt "Libre Franklin font: on or off"
+msgid "on"
+msgstr "off"
+
+#: template-parts/navigation/navigation-top.php:12 functions.php:64
+#: functions.php:205
+msgid "Top Menu"
+msgstr "顶部菜单"
+
+#: comments.php:62
+msgid "Reply"
+msgstr "回复"
+
+#: template-parts/post/content-none.php:33
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "我们可能无法找到您需要的内容。或许搜索功能可以帮到您。"
+
+#: search.php:59
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "抱歉，没有符合您搜索条件的结果。请换其它关键词再试。"
+
+#: template-parts/post/content-none.php:17 search.php:26
+msgid "Nothing Found"
+msgstr "未找到"
+
+#: single.php:33
+msgid "Previous Post"
+msgstr "上一篇文章"
+
+#: single.php:33 comments.php:71
+msgid "Previous"
+msgstr "上一篇"
+
+#: single.php:34 comments.php:72
+msgid "Next"
+msgstr "下一篇"
+
+#: searchform.php:20
+msgctxt "submit button"
+msgid "Search"
+msgstr "搜索"
+
+#: searchform.php:19
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "搜索…"
+
+#: searchform.php:17
+msgctxt "label"
+msgid "Search for:"
+msgstr "搜索："
+
+#. translators: Search query.
+#: search.php:22
+msgid "Search Results for: %s"
+msgstr "%s的搜索结果"
+
+#. translators: %s: Post title.
+#: template-parts/post/content.php:57 template-parts/post/content-audio.php:84
+#: template-parts/post/content-image.php:61
+#: template-parts/post/content-video.php:83
+#: template-parts/post/content-gallery.php:71
+#: template-parts/page/content-front-page.php:42
+#: template-parts/page/content-front-page-panels.php:45 functions.php:392
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "继续阅读<span class=\"screen-reader-text\">“%s”</span>"
+
+#: inc/customizer.php:63
+msgid "Dark"
+msgstr "暗色"
+
+#. translators: %s: The current WordPress version.
+#: inc/back-compat.php:40 inc/back-compat.php:54 inc/back-compat.php:73
+msgid "Twenty Seventeen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again."
+msgstr "Twenty Seventeen主题需要WordPress 4.7或更高版本。您运行的%s版，请在更新WordPress后重试。"
+
+#. translators: %s: Post title.
+#: inc/template-tags.php:117
+msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "编辑<span class=\"screen-reader-text\">“%s”</span>"
+
+#: template-parts/post/content.php:64 template-parts/post/content-audio.php:91
+#: template-parts/post/content-image.php:68
+#: template-parts/post/content-video.php:90
+#: template-parts/post/content-gallery.php:78
+#: template-parts/page/content-page.php:26
+msgid "Pages:"
+msgstr "页码："
+
+#: template-parts/navigation/navigation-top.php:17
+msgid "Menu"
+msgstr "菜单"
+
+#: header.php:28
+msgid "Skip to content"
+msgstr "跳至内容"
+
+#: functions.php:484
+msgid "Collapse child menu"
+msgstr "折叠子菜单"
+
+#: functions.php:483
+msgid "Expand child menu"
+msgstr "展开子菜单"
+
+#: functions.php:65 functions.php:216
+msgid "Social Links Menu"
+msgstr "社交网络链接菜单"
+
+#. translators: %s: WordPress
+#: template-parts/footer/site-info.php:21
+msgid "Proudly powered by %s"
+msgstr "自豪地采用%s"
+
+#: footer.php:26
+msgid "Footer Social Links Menu"
+msgstr "页脚社交链接菜单"
+
+#: comments.php:82
+msgid "Comments are closed."
+msgstr "评论已关闭。"
+
+#. translators: 1: Number of comments, 2: Post title.
+#: comments.php:41
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] "&ldquo;%2$s&rdquo;的%1$s个回复"
+
+#. translators: %s: Post title.
+#: comments.php:37
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr "&ldquo;%s&rdquo;的一个回复"
+
+#: index.php:55 archive.php:51 search.php:52
+msgid "Page"
+msgstr "页"
+
+#: 404.php:21
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "有点尴尬诶！该页无法显示。"
+
+#: 404.php:24
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "这儿似乎什么都没有，试试搜索？"
+
+#: index.php:53 archive.php:49 search.php:50
+msgid "Previous page"
+msgstr "上一页"
+
+#: index.php:54 archive.php:50 search.php:51
+msgid "Next page"
+msgstr "下一页"
+
+#. Author of the theme
+msgid "the WordPress team"
+msgstr "WordPress团队"
+
+#. Theme URI of the theme
+msgid "https://wordpress.org/themes/twentyseventeen/"
+msgstr "https://wordpress.org/themes/twentyseventeen/"
+
+#. Author URI of the theme
+#: template-parts/footer/site-info.php:18
+msgid "https://wordpress.org/"
+msgstr "https://cn.wordpress.org/"
