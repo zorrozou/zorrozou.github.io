@@ -1,6 +1,6 @@
 title: Zorro's Linux Book 
 logo: /assets/img/logo.png
 description: Hi, I'm zorro.
-show_downloads: true
+show_downloads: false 
 google_analytics:
 theme: jekyll-theme-time-machine
