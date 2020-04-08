@@ -205,6 +205,7 @@ debugfs:  block_dump 745468
 
 可以看到，文件对应的block信息确实是passwd的相关数据。
 之后，我们可以删除文件了，然后使用debugfs再观察文件信息：
+
 ```
 rm /test/bigfile
 umount /test/                   #保护文件系统不受后续磁盘操作的影响
@@ -293,6 +294,8 @@ struct ext4_inode {
 
 inode结构信息并未显示完整，我们只选取我们当前关注的信息进行学习。在这个结构体中我们可以看到，文件的相关属性信息都在inode中，这里对于数据恢复最重要的是i_block数组，这个数组中有15个元素，记录的是此文件指向的存储文件数据的对应block。在ext2/3文件系统上，这个数组的前12的元素是直接指向存储数据的block，恢复数据可以直接读对应编号的block即可。而13、14、15三个分别为一级、二级、三级间接索引指向，相关概念不在此详述，但是相对比较容易找到对应的block查看相关数据。
 而我们目前面对的是ext4，在数据block索引方法上相对ext3有很大变化，主要就是引入了extent机制。我们在此不详述为啥要引入extent，仅从数据恢复的角度来学习extent的结构。那么针对当前这个2G左右的文件，其extent在inode上是怎么布局的呢？可以参考下图：
+
+![1](https://zorrozou.github.io/docs/ext4/1.jpg)
 
 此图引用自： https://zhuanlan.zhihu.com/p/52052278 更细节内容可以查看原文。
 
@@ -464,6 +467,8 @@ dd if=/dev/sdf1 of=34816 bs=4K count=1 skip=34816
 
 因为已知这个文件extent树只有1级，所以我们可以大胆的根据下一级结构对索引的block进行估算。再上图中，这个block内容对应这个布局：
 
+![2](https://zorrozou.github.io/docs/ext4/2.png)
+
 我们猜测上述blcok的hexdump内容在6-12行为有效数据，即偏移量标示为0-224字节内的所有内容。前12个字节为ext4_extent_header信息。使用 hexdump -e '"%4_ad |" 16/2 "%5d " "\n"' 34816 命令可以看到这个header中对应的eh_depth为0，所以12字节后的都是ext4_extent结构，直接指向对应block。ext4_extent中，我们主要关注ee_len、ee_start_hi、ee_start_lo，并且后两个组合在一起表示一个48位block信息。所以我们先用下面这个命令列出所有的ext4_extent中的起始block位置的低32位数字：
 ```
 hexdump -e '"%4_ad |" 3/4 "%12d " "\n"' 34816 | head -20
@@ -589,6 +594,8 @@ ls -l bigfile_restore
 ### ext4分区结构
 
 ext4的分区结构布局跟ext3基本没什么变化，结构参见下图：
+
+![3](https://zorrozou.github.io/docs/ext4/3.png)
 
 这里跟ext3有变化的是绿色标记的部分：ext4加入了flex_bg属性，这个属性让文件系统在块组结构之上又多了个flex块组结构。每个flex_bg包含连续的若干个块组，这个功能让之前分散在各个块组中管理的组描述符、块位图、inode位图和inode表等相关metadate信息放在了flex_bg的第一个块组中管理，于是其他块组中基本都是连续的块。
 我们可以使用dumpe2fs命令查看ext4文件系统的结构，其中Flex block group size就是一个flex_bg中包含的块组个数：
@@ -1094,6 +1101,8 @@ hexdump -e '3/4 "%12u" "\n"' inode_87687169.rm
 通过目录的每一级索引，就可以遍历到文件系统上所有文件的inode编号，进而找到对应的inode信息。我们已经知道inode中索引了相关block信息，于是整个文件系统所存储的数据就这样组织起来了。
 
 我们通过开头的实验已经大概知道inode中如何索引的block，但那是对一个2G的大文件。如果文件比较小，那么其extent的索引结构相对比较简单。我们知道inode中存放i_block索引的数组元素个数是15个，每个是一个int，所以一共有60字节的长度可以用来存放extent相关数据结构。对于小文件的情况，起索引结构如下图：
+
+![4](https://zorrozou.github.io/docs/ext4/4.png)
 
 
 每个ext4_extent_header和ext4_extent结构都是12字节。所以这部分最多可以存4个ext4_extent索引，每个ext4_extent最多可以索引32768个连续的block。所以理论上，通过inode直接索引的文件大小最大可以达到512M长度。但是现实使用的情况下，磁盘上一般都不会有那么多连续的块分配给文件，所以大多数文件都到不了这么长，只要占用的ext4_extent结构超过4个，就会产生分级的extent进行更多的块索引。
