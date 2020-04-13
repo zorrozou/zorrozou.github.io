@@ -35,4 +35,5 @@ layout: default
 * [sed命令进阶](docs/books/sedming-ling-jin-jie.md)
 * [find命令详解](docs/books/findming-ling-xiang-jie.md)
 * [ext4数据恢复实战及文件系统结构详解](docs/ext4/ext4.md)
+* [xfs文件系统结构详解](docs/xfs/XFS文件系统结构.md)
 
