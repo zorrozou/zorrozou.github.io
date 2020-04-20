@@ -21,6 +21,7 @@ layout: default
 * [Cgroup - Linux内存资源管理](docs/books/cgroup_linux_memory_control_group.md)
 * [Cgroup - Linux的IO资源隔离](docs/books/cgroup-linuxde-io-zi-yuan-ge-li.md)
 * [Cgroup - Linux的网络资源隔离](docs/books/cgroup_linux_network_control_group.md)
+* [Cgroup - 详解Cgroup V2](docs/详解Cgroup V2.md)
 * [Linux的进程间通信 － 管道](docs/books/linuxde-jin-cheng-jian-tong-xin-guan-dao.md)
 * [Linux的进程间通信-文件和文件锁](docs/books/linuxde-jin-cheng-jian-tong-4fe1-wen-jian-he-wen-jian-suo.md)
 * [Linux进程间通信-共享内存](docs/books/linuxjin-cheng-jian-tong-4fe1-gong-xiang-nei-cun.md)
