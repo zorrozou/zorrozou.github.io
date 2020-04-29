@@ -1,17 +1,22 @@
 # Cgroup - Linux的IO资源隔离
 
+-------------------------------------------------------------------------------------	
 
-![Zorro］ icon](https://zorrozou.github.io/assets/img/logo.png)
+版权声明：
 
-Hi，我是Zorro。这是我的[微博地址](http://weibo.com/orroz)，我会不定期在这里更新文章，如果你有兴趣，可以来关注我呦。
+本文章内容在非商业使用前提下可无需授权任意转载、发布。
 
-另外，我的其他联系方式：
+转载、发布请务必注明作者和其微博、微信公众号地址，以便读者询问问题和甄误反馈，共同进步。
 
-**Email:** <mini.jerry@gmail.com>
+微博：
+[https://weibo.com/orroz/](https://weibo.com/orroz)
 
-**QQ:** 30007147
+博客：
+[https://zorrozou.github.io/](https://zorrozou.github.io/)
 
-本文[PDF](http://pan.baidu.com/s/1kUf9h8j)
+微信公众号：**Linux系统技术**
+
+-------------------------------------------------------------------------------------
 
 今天我们来谈谈：
 
@@ -398,6 +403,26 @@ B为：200/（400+200+200） ＊ 100% ＝ 25%
 
 ![Linux IO协议栈框架图](/Users/zorro/Desktop/Linux-storage-stack-diagram_v4.0.png)
 
+
+----------------------------------
+
+大家好，我是Zorro！
+
+如果你喜欢本文，欢迎在微博上搜索“**orroz**”关注我，地址是：
+[https://weibo.com/orroz](https://weibo.com/orroz)
+
+大家也可以在微信上搜索：**Linux系统技术** 关注我的公众号。
+
+我的所有文章都会沉淀在我的个人博客上，地址是：
+[https://zorrozou.github.io/](https://zorrozou.github.io/)。
+
+欢迎使用以上各种方式一起探讨学习，共同进步。
+
+公众号二维码：
+
+![Zorro］ icon](http://ww1.sinaimg.cn/mw690/6673053fgw1f31zfw1dprj20by0by0tc.jpg)
+
+----------------------------------
 
 
 

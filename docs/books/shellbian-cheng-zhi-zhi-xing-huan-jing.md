@@ -14,7 +14,7 @@
 博客：
 [https://zorrozou.github.io/](https://zorrozou.github.io/)
 
-微信公众号：Linux系统技术
+微信公众号：**Linux系统技术**
 
 -------------------------------------------------------------------------------------
 
@@ -572,6 +572,5 @@ ulimit参数中绝大多数配置都是root才有权限改的更大，而非root
 ![Zorro］ icon](http://ww1.sinaimg.cn/mw690/6673053fgw1f31zfw1dprj20by0by0tc.jpg)
 
 ----------------------------------
-
 
 

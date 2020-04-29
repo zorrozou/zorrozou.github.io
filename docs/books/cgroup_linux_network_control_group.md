@@ -1,17 +1,22 @@
 # Cgroup - Linux的网络资源隔离
 
+-------------------------------------------------------------------------------------	
 
-![Zorro］ icon](http://tp4.sinaimg.cn/1718814015/180/5739428251/1)
+版权声明：
 
-Hi，我是Zorro。这是我的[微博地址](http://weibo.com/orroz)，如果你有兴趣，可以来关注我呦。
+本文章内容在非商业使用前提下可无需授权任意转载、发布。
 
-这是我的[博客地址](http://liwei.life)，我会不定期在这里更新文章，如有谬误，欢迎随时指正。
+转载、发布请务必注明作者和其微博、微信公众号地址，以便读者询问问题和甄误反馈，共同进步。
 
-另外，我的其他联系方式：
+微博：
+[https://weibo.com/orroz/](https://weibo.com/orroz)
 
-**Email:** <mini.jerry@gmail.com>
+博客：
+[https://zorrozou.github.io/](https://zorrozou.github.io/)
 
-**QQ:** 30007147
+微信公众号：**Linux系统技术**
+
+-------------------------------------------------------------------------------------
 
 本文不会涉及一些网络基础知识的讲解以及iproute2相关命令的使用的讲解，建议如果想要更好理解本文，之前应该对网络知识、tc命令和[LARTC](http://www.lartc.org/LARTC-zh_CN.GB2312.pdf)的文档有一定了解。如果本文中有什么知识点让不够清楚，可以结合LARTC文档一起服用。
 
@@ -660,4 +665,24 @@ default参数的含义就是，默认数据包都走标记为30的类（class）
 
 ![Netfilter-packet-flow](http://img1.51cto.com/attachment/201306/140855493.png)
 
+
+----------------------------------
+
+大家好，我是Zorro！
+
+如果你喜欢本文，欢迎在微博上搜索“**orroz**”关注我，地址是：
+[https://weibo.com/orroz](https://weibo.com/orroz)
+
+大家也可以在微信上搜索：**Linux系统技术** 关注我的公众号。
+
+我的所有文章都会沉淀在我的个人博客上，地址是：
+[https://zorrozou.github.io/](https://zorrozou.github.io/)。
+
+欢迎使用以上各种方式一起探讨学习，共同进步。
+
+公众号二维码：
+
+![Zorro］ icon](http://ww1.sinaimg.cn/mw690/6673053fgw1f31zfw1dprj20by0by0tc.jpg)
+
+----------------------------------
 
