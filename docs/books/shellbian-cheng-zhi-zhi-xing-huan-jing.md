@@ -6,9 +6,11 @@
 
 	转载、发布请务必注明作者和其微博、微信公众号地址，以便读者询问问题和甄误反馈，共同进步。
 
-	微博：[https://weibo.com/orroz/](https://weibo.com/orroz)
+	微博：
+	[https://weibo.com/orroz/](https://weibo.com/orroz)
 
-	博客：[https://zorrozou.github.io/](https://zorrozou.github.io/)
+	博客：
+	[https://zorrozou.github.io/](https://zorrozou.github.io/)
 
 	微信公众号：Linux系统技术
 
@@ -551,11 +553,13 @@ ulimit参数中绝大多数配置都是root才有权限改的更大，而非root
 
 大家好，我是Zorro！
 
-如果你喜欢本文，欢迎在微博上搜索“**orroz**”关注我，地址是：[https://weibo.com/orroz][https://weibo.com/orroz]
+如果你喜欢本文，欢迎在微博上搜索“**orroz**”关注我，地址是：
+[https://weibo.com/orroz](https://weibo.com/orroz)
 
 大家也可以在微信上搜索：**Linux系统技术** 关注我的公众号。
 
-我的所有文章都会沉淀在我的个人博客上，地址是：[https://zorrozou.github.io/](https://zorrozou.github.io/)。
+我的所有文章都会沉淀在我的个人博客上，地址是：
+[https://zorrozou.github.io/](https://zorrozou.github.io/)。
 
 欢迎使用以上各种方式一起探讨学习，共同进步。
 
