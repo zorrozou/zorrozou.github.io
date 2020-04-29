@@ -19,7 +19,7 @@ layout: default
 * [Linux的IO调度](docs/books/linuxde-io-diao-du.md)
 * [Cgroup - 从CPU资源隔离说起](docs/books/cgroup_linux_cpu_control_group.md)
 * [Cgroup - Linux内存资源管理](docs/books/cgroup_linux_memory_control_group.md)
-* [Cgroup - Linux的IO资源隔离](docs/books/cgroup-linuxde-io-zi-yuan-ge-li.md)
+* [Cgroup - Linux的IO资源隔离](docs/books/cgroup_linux_io_control_group.md)
 * [Cgroup - Linux的网络资源隔离](docs/books/cgroup_linux_network_control_group.md)
 * [Cgroup - 详解Cgroup V2](docs/详解Cgroup V2.md)
 * [Linux的进程间通信 － 管道](docs/books/linuxde-jin-cheng-jian-tong-xin-guan-dao.md)
