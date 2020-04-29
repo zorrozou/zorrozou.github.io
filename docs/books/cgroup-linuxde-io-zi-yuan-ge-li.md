@@ -1,9 +1,9 @@
 # Cgroup - Linux的IO资源隔离
 
 
-![Zorro］ icon](http://tp4.sinaimg.cn/1718814015/180/5739428251/1)
+![Zorro］ icon](https://zorrozou.github.io/assets/img/logo.png)
 
-Hi，我是Zorro。这是我的[微博地址](http://weibo.com/orroz)，我会不定期在这里更新文章，如果你有兴趣，可以来关注我呦。
+Hi，我是Zorro。这是我的[微博地址](http://weibo.com/orroz)和我的[博客地址](https://zorrozou.github.io/)，我会不定期在这里更新文章，如果你有兴趣，可以来关注我呦。
 
 另外，我的其他联系方式：
 

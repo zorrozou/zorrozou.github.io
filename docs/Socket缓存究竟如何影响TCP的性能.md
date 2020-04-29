@@ -51,6 +51,10 @@ default：决定其默认长度。
 
 max：决定其最大长度。在一个tcp链接中，对应的buffer长度将在min和max之间变化。导致变化的主要因素是当前内存压力。如果使用setsockopt设置了对应buffer长度的话，这个值将被忽略。相当于关闭了tcp buffer的动态调整。
 
+/proc/sys/net/ipv4/tcp_moderate_rcvbuf
+
+这个文件是服务器是否支持缓存动态调整的开关，1为默认值打开，0为关闭。
+
 另外要注意的是，使用 setsockopt 设置对应buffer长度的时候，实际生效的值将是设置值的2倍。
 
 当然，这里面所有的rmem都是针对接收缓存的限制，而wmem都是针对发送缓存的限制。
@@ -290,7 +294,11 @@ bigfile                   100%[=====================================>]   1.00G  
 2020-04-13 15:25:43 (76.9 MB/s) - 'bigfile' saved [1073741824/1073741824]
 ```
 
-此时理论上应该获得比刚才更理想的下载速率。
+此时理论上应该获得比刚才更理想的下载速率。另外还有一个文件需要注意：
+
+/proc/sys/net/ipv4/tcp_adv_win_scale
+
+这个值用来影响缓存中有多大空间用来存放overhead相关数据，所谓overhead数据可以理解为比如TCP报头等非业务数据。假设缓存字节数为bytes，这个值说明，有bytes/2的tcp_adv_win_scale次方的空间用来存放overhead数据。默认值为1表示有1/2的缓存空间用来放overhead，此值为二表示1/4的空间。当tcp_adv_win_scale <= 0的时候，overhead空间运算为：bytes-bytes/2^(-tcp_adv_win_scale)。取值范围是：[-31, 31]。
 
 可以在下载过程中使用ss命令查看rcv_space和rcv_ssthresh的变化：
 
