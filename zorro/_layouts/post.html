@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="box">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <span class="post-meta">{{ page.date | date: "%-d %B, %Y. It was a %A." }} <a style="color:grey" href="{{ BASE_PATH }}{{ post.url }}#disqus_thread"></a></span><hr/>
+
+    <span class="post-text">{{ content }}</span>
+    {% include post-pagination.html %}
+</div>
+
+<!--<div class="box">-->
+    <!-- google ads code box -->
+<!--</div>-->
+
+{% include JB/comments %}

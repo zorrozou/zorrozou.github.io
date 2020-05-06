@@ -1,0 +1,120 @@
+/*
+    Import League Gothic <3
+*/
+@font-face {
+    font-family: 'League Gothic';
+    src: url('leaguegothic-regular-webfont.eot');
+    src: url('leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('leaguegothic-regular-webfont.woff') format('woff'),
+    url('leaguegothic-regular-webfont.ttf') format('truetype'),
+    url('leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.main-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.container {
+    text-align: center;
+}
+
+/* for mobile screens otherwise it messes up the nav*/
+#searchFieldNav {
+    width: 65%;
+}
+
+h1.title > span {
+    font-family: "League Gothic", "Arial Narrow", Arial, sans-serif;
+    margin-bottom: 1.75rem;
+    font-size: 1.5em;
+}
+
+.subtitle {
+    font-size: 0.80em;
+    margin-top: -1.0rem;
+}
+
+.post {
+    margin-bottom: 1em;
+}
+
+.nice-title {
+    font-size: larger;
+    font-weight: 400;
+    font-family: Roboto, sans-serif;
+}
+
+.nice-text {
+    font-family: "Open Sans", sans-serif;
+}
+
+.card-content {
+    padding: 0 0 1em;
+}
+
+.fa-heart:hover {
+    color: red;
+}
+
+.footer {
+    padding: 3rem 1.5rem 3rem;
+}
+
+.post-title {
+    font-size: x-large;
+    font-family: Roboto, sans-serif;
+}
+
+.post-meta {
+    font-family: "Open Sans", sans-serif;
+    font-size: small;
+}
+
+.post-text {
+    font-family: "Open Sans", sans-serif;
+}
+
+.post-text > p {
+    margin-bottom: 1em;
+}
+
+/* sorry God. Just once */
+.sidebar {
+    padding: 0 0.75rem 0.75rem 0.75rem !important;
+}
+
+.box {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    color: #57A3E8;
+}
+/* Hotfix for lists being misaligned */
+.tile.is-parent ol, ul {
+  padding: 2% 5%;
+}
+/* Hotfix for Bulma striping headings of styling */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .pagination {
+    flex-wrap: nowrap;
+  }
+  .pagination-list {
+    font-size: 0%;
+  }
+}
+/* ~ jpasholk */
