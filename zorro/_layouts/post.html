@@ -1,17 +1,18 @@
 ---
 layout: default
 ---
+{%- include header.html -%}
 
-<div class="box">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <span class="post-meta">{{ page.date | date: "%-d %B, %Y. It was a %A." }} <a style="color:grey" href="{{ BASE_PATH }}{{ post.url }}#disqus_thread"></a></span><hr/>
-
-    <span class="post-text">{{ content }}</span>
-    {% include post-pagination.html %}
+<!-- Main -->
+<div id="main">
+	<!-- Post -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2>{{- page.title -}}</h2>
+				<p>{% if page.author %}{{ page.author }}, {% endif %}{{- page.date | date_to_long_string -}}</p>
+			</header>
+	    {{- content -}}
+	  </div>
+	</article>
 </div>
-
-<!--<div class="box">-->
-    <!-- google ads code box -->
-<!--</div>-->
-
-{% include JB/comments %}
