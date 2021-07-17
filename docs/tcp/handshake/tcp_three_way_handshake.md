@@ -675,7 +675,7 @@ listening on ens33, link-type EN10MB (Ethernet), capture size 262144 bytes
 
 0x400 ：对服务器端有效。默认情况下，使所有listen端口都支持TFO，而无需设置TCP_FASTOPEN套接字选项。
 
-这里还需要补充的是，在一般情况下，除了内核打开相关开关以外，应用程序要支持TFO还要做相关调整。对于客户端来说，需要使用sendmsg()或sendto()来法送数据，并且要在flag参数中添加MSG_FASTOPEN标记。对于服务端来说，需要在socket打开后，使用setsockopt设置TCP_FASTOPEN选项来打开TFO支持。
+这里还需要补充的是，在一般情况下，除了内核打开相关开关以外，应用程序要支持TFO还要做相关调整。对于客户端来说，需要使用sendmsg()或sendto()来发送数据，并且要在flag参数中添加MSG_FASTOPEN标记。对于服务端来说，需要在socket打开后，使用setsockopt设置TCP_FASTOPEN选项来打开TFO支持。
 
 /proc/sys/net/ipv4/tcp_fastopen_key
 
@@ -683,7 +683,10 @@ listening on ens33, link-type EN10MB (Ethernet), capture size 262144 bytes
 
 /proc/sys/net/ipv4/tcp_fastopen_blackhole_timeout_sec
 
-因为TFO修改了正常tcp三次握手的过程，在第一个syn包经过网络到达服务器期间，有可能部分路由器或防火墙规则会把这种特殊的syn当成异常流量而禁止掉。在这个语境下，我们把这种现象叫做TFO firewall blackhole。默认的机制是，如果检测到防火墙黑洞，则触发暂时关闭TFO功能，这个文件就是用来设置关闭时间周期的，默认值为：3600，表示如果检测到黑洞，则在3600秒内关闭TFO。并且在第每个关闭周期结束后，如果再次检测还发现有黑洞，则下次关闭周期时间是将会成倍增长。值为0表示关闭黑洞检测。
+因为TFO修改了正常tcp三次握手的过程，在第一个syn包经过网络到达服务器期间，有可能部分路由器或防火墙规则会把这种特殊的syn当成异常流量而禁止掉。在这个语境下，我们把这种现象叫做TFO firewall blackhole。默认的机制是，如果检测到防火墙黑洞，则触发暂时关闭TFO功能，这个文件就是用来设置关闭时间周期的，默认值为：3600，表示如果检测到黑洞，则关闭TFO功能，等待3600s后再尝试打开。并且在第每个关闭周期结束后，如果再次检测还发现有黑洞，则下次关闭周期时间将会成倍增长，最多增长到2^6*3600，而当检测到一次TFO连接成功交换数据，就会把这个timeout重置为3600s， 值为0表示关闭黑洞检测。稍微补充一下，触发TFO黑洞的条件如下(看起来关闭TFO的行为一般是请求端自己主动做的)
+1. 客户端TFO socket接收到失序的FIN包
+2. 客户端TFO socket接收到失序的RST包
+3. 客户端TFO socket在握手期间或者握手之后连续三次丢包
 
 另外就是nginx配置中的fastopen=128的128是啥意思：其实就是限制打开fastopen后，针对这个端口未完成三次握手连接的最大长度限制。这个限制可以开的大些。具体可以参见nginx的配置说明：http://nginx.org/en/docs/http/ngx_http_core_module.html 。
 
