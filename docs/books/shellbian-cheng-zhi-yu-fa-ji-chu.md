@@ -448,7 +448,7 @@ case版：
 
 	#!/bin/bash
 	
-	case $1x$2 in
+	case $1:$2 in
 		zorro:zorro|jerry:jerry)
 		echo "ok!"
 		;;
@@ -688,7 +688,7 @@ bash提供了两种for循环，一种是类似C语言的for循环，另一种是
 
 ##continue和break
 
-对于bash的实现来说，continue和break实际上并不是语法的关键字，而是被作为内建命令来实现的。不过我们从习惯上依然把它们看作是bash的语法。在bash中，break和continue可以用来跳出和金星下一次for，while，until和select循环。
+对于bash的实现来说，continue和break实际上并不是语法的关键字，而是被作为内建命令来实现的。不过我们从习惯上依然把它们看作是bash的语法。在bash中，break和continue可以用来跳出和進行下一次for，while，until和select循环。
 
 ##最后
 
